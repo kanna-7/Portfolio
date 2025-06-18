@@ -1,222 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portifolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/dc21b19159.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/dc21b19159.js" crossorigin="anonymous"></script>
+  <style>
+    .right-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 700px;
+      margin-top: 100px;
+      margin-right: 100px;
+    }
+    
+    /* Message styling */
+    #msg {
+      display: block;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    
+    #msg.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    #msg.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    #msg.loading {
+      background-color: #d1ecf1;
+      color: #0c5460;
+      border: 1px solid #bee5eb;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/v.jpg" class="logo" alt="Portfolio Logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>UI/UX Designer</p>
-                <h1>Hi,I'm <span>Praveen</span><br> From India</h1>
-            </div>
-        </div>
-    </div>
-    <!-- ----------------about---------- -->
-    <div id="about">
-        <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/v.jpg" alt="">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Hi, I’m Kadali Mourya, a B.Tech student in Software Product Engineering at GGU through Kalvium. I specialize in frontend, backend, and full-stack development, with expertise in Java, Python, JavaScript, and UI/UX design. I’m passionate about building user-friendly and impactful software solutions while continuously exploring and learning new technologies.</p>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Development</span><br>Web App Development</li>
-                        <li><span>App Development</span><br>Buliding android/ios apps</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Development</span><br>Web App Development</li>
-                        <li><span>App Development</span><br>Buliding android/ios apps</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2025 - Current</span><br>Btech special program kalvium(spe)</li>
-                        <li><span>2024</span><br>inter completed</li>
-                        <li><span>2020</span><br>10th completed</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <!-- HEADER SECTION -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <h1 class="logo">
+          <span style="color: red;">P</span><span style="color: white;">raveen </span><span style="color: red;">V</span><span style="color: white;">ithanala</span>
+        </h1>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hi, I'm <span>Praveen</span><br> From India</h1>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- ------------------services----------------- -->
-<div id="services">
+  <!-- ABOUT SECTION -->
+  <div id="about">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services_list">
-            <div>
-                <i class="fas fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Web design is creating attractive and user-friendly websites that work well on all devices while ensuring a great user experience.</p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fas fa-crop-alt"></i>
-                <h2>UI/UX Design</h2>
-                <p>UI/UX design creates visually appealing (UI) and user-friendly (UX) digital experiences to ensure ease and engagement.</p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fab fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>App design focuses on creating intuitive and visually appealing interfaces for seamless user experiences.</p>
-                <a href="#">learn more</a>
-            </div>
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/2.jpg" alt="">
         </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Hi, I'm VJ Praveen Gopal, a B.Tech student in Software Product Engineering at GGU through Kalvium. I specialize in frontend, backend, and full-stack development, with expertise in Java, Python, JavaScript, and UI/UX design.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web App Development</li>
+              <li><span>App Development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web App Development</li>
+              <li><span>App Development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2025 - Current</span><br>B.Tech special program Kalvium (SPE)</li>
+              <li><span>2024</span><br>Intermediate completed</li>
+              <li><span>2020</span><br>10th completed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<!-- -----------portfolio----------- -->
- <div id="portfolio">
+  </div>
+
+  <!-- SERVICES SECTION -->
+  <div id="services">
     <div class="container">
-        <h1 class="sub-title">My work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/hackthon.png" alt="">
-                <div class="layer">
-                    <h3>Urban Wander</h3>
-                    <p>Urban Wander is an AI-driven travel platform offering personalized tourist guidance and budget-friendly trip planning for hassle-free exploration.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/hackthon.png" alt="">
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>A social media app connects users, allowing them to share content, interact, and build communities through various features like posts, likes, and messaging.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/hackthon.png" alt="">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>An online shopping app enables users to explore, buy, and track products conveniently with secure payments and personalized features.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
+      <h1 class="sub-title">My Services</h1>
+      <div class="services_list">
+        <div>
+          <i class="fas fa-code"></i>
+          <h2>Web Design</h2>
+          <p>Creating attractive, responsive, and user-friendly websites with a focus on UI/UX.</p>
+          <a href="#">Learn more</a>
         </div>
-        <a href="#" class="btn">See more</a>
+        <div>
+          <i class="fas fa-crop-alt"></i>
+          <h2>UI/UX Design</h2>
+          <p>Crafting intuitive and engaging interfaces to enhance digital user experiences.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fab fa-app-store"></i>
+          <h2>App Design</h2>
+          <p>Designing seamless, visually appealing apps for Android and iOS platforms.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
     </div>
- </div>
- <!-- ---------------contact---------------- -->
+  </div>
+
+  <!-- PORTFOLIO SECTION -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/hackthon.png" alt="">
+          <div class="layer">
+            <h3>Urban Wander</h3>
+            <p>AI-driven travel platform for personalized tourist guidance and budget-friendly trip planning.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/hackthon.png" alt="">
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>Connect users through posts, likes, messaging, and community-building features.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/hackthon.png" alt="">
+          <div class="layer">
+            <h3>Online Shopping App</h3>
+            <p>Explore, purchase, and track products with personalized shopping experiences.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
   <div id="contact">
     <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
-                <p><i class="fa-solid fa-phone-square-alt"></i>0123456789</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <a href="images/hackthon.png" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact_right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form> 
-                  <span id="msg"></span>         
-            </div>
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> praveen.vj.127@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +91 9666981561</p>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/praveen-vithanala-10279b32a/"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="images/resume.pdf" download class="btn btn2">Download CV</a>
         </div>
+        <div class="contact_right">
+          <span id="msg"></span>
+        </div>
+      </div>
     </div>
     <div class="copyright">
-        <p>Copyright .Made <i class="fa-solid fa-heart"></i> by Mourya</p>
+      <p>Copyright © Made with <i class="fa-solid fa-heart"></i> by Praveen</p>
     </div>
-</div>
-<script>
+  </div>
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    
-function opentab(tabname) {
-    for (tablink of tablinks) {
-        tablink.classList.remove("active-link");
-    }
-    for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
+  <img src="images/me.jpg" alt="Me" class="right-image">
 
-
-
-
-</script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-    
-</script>
-<form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">Send</button>
-</form>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyX9_4jUtGQPj5IA_BMoIErm22N1bMURRTxNNtBeAEXOnjWnJmXRGo2zM1oddkeUAvG/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response =>{
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML = " "
-        },5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
 
 </body>
+
 </html>
